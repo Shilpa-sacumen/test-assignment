@@ -8,6 +8,14 @@ from .models import Book, Employee
 
 # Create your views here.
 def page1(request):
+    """page1
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     date = datetime.now()
     h = int(date.strftime("%H"))
 
@@ -24,15 +32,38 @@ def page1(request):
 
 
 def book_info(request):
-    
+    """book_info
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     book = Book.objects.all()
     return render(request, "index.html", {"book": book})
 
 
 def employee_info(request):
+    """employee_info
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     emp = Employee.objects.all()
     return render(request, "employee.html", {"emp": emp})
 
 
 def forms_info(request):
+    """forms_info
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     return render(request, "forms.html")
