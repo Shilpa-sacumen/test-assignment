@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,th,td{
+            border: 1px solid brown;
+            border-collapse: collapse;
+          
+        
+        }
+        th,td{
+            padding: 10px;
+            margin: 5px;
+        }
+        tr:nth-child(even){
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+        th:nth-child(even),td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+          }
+    </style>
+</head>
+<body>
+    <h1>Employee  Data</h1>
+  
+    {% if emp %}
+        <table  >
+            <caption>Employee info</caption>
+        
+            <thead>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Sal</th>
+                <th>Job</th>
+            </thead>
+            {% for x in emp %}
+            <tr>
+                <td>{{x.Empno}}</td>
+                <td>{{x.Ename}}</td>
+                <td>{{x.sal}}</td>
+                <td>{{x.job}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No Employee Information present!! </p>
+    {% endif %}
+</body>
+</html>
