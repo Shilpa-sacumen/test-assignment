@@ -24,14 +24,7 @@ def page1(request):
 
 
 def book_info(request):
-    """book info
-
-    Args:
-        request (_type_): _description_
-
-    Returns:
-        html: returns html page
-    """
+    
     book = Book.objects.all()
     return render(request, "index.html", {"book": book})
 
