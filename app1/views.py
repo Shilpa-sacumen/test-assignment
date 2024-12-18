@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.shortcuts import render
-from requests import ReadTimeout, Response
+
 
 from .models import Book, Employee
 
