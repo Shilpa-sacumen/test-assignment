@@ -1,3 +1,4 @@
+"""Views file"""
 from datetime import datetime
 
 from django.shortcuts import render
@@ -40,7 +41,7 @@ def book_info(request):
     Returns:
         _type_: _description_
     """
-    book = Book.objects.all()
+    book = Book.objects.all() #pylint: disable=no-member
     return render(request, "index.html", {"book": book})
 
 
@@ -53,7 +54,7 @@ def employee_info(request):
     Returns:
         _type_: _description_
     """
-    emp = Employee.objects.all()
+    emp = Employee.objects.all() #pyliny: disable=no-member
     return render(request, "employee.html", {"emp": emp})
 
 
