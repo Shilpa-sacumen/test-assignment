@@ -54,7 +54,7 @@ def employee_info(request):
     Returns:
         _type_: _description_
     """
-    emp = Employee.objects.all() #pyliny: disable=no-member
+    emp = Employee.objects.all() #pylint: disable=no-member
     return render(request, "employee.html", {"emp": emp})
 
 
