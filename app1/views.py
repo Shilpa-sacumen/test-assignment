@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 
 from .models import Book, Employee
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -68,3 +69,12 @@ def forms_info(request):
         _type_: _description_
     """
     return render(request, "forms.html")
+
+
+def feature(request):
+    """_summary_
+
+    Args:
+        request (_type_): _description_
+    """
+    return HttpResponse("Hi this is from new feature branch 1")
