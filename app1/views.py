@@ -70,11 +70,5 @@ def forms_info(request):
     """
     return render(request, "forms.html")
 
-
-def feature(request):
-    """_summary_
-
-    Args:
-        request (_type_): _description_
-    """
-    return HttpResponse("Hi this is from new feature branch 1")
+def feature1(request):
+    pass
