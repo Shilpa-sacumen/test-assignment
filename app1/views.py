@@ -71,7 +71,7 @@ def forms_info(request):
     return render(request, "forms.html")
 
 
-def feature(request):
+def feature2(request):
     """_summary_
 
     Args:
